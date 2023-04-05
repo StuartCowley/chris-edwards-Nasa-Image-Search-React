@@ -5,17 +5,19 @@ exports[`Search renders correctly 1`] = `
   <div
     class="search-bar-container"
   >
-    <input
-      placeholder="Search..."
-      type="text"
-      value=""
-    />
-    <button
-      class="search-button"
-      type="submit"
-    >
-      Blast off!
-    </button>
+    <form>
+      <input
+        placeholder="Search..."
+        type="text"
+        value=""
+      />
+      <button
+        class="search-button"
+        type="submit"
+      >
+        Blast off
+      </button>
+    </form>
   </div>
 </DocumentFragment>
 `;

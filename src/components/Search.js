@@ -15,15 +15,17 @@ function SearchBar({ onSubmit }) {
 
   return (
     <div className="search-bar-container">
-      <input
-        type="text"
-        placeholder="Search..."
-        onChange={handleInputChange}
-        value={inputValue}
-      />
-      <button className="search-button" type="submit" onClick={handleSubmit}>
-        Blast off!
-      </button>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Search..."
+          onChange={handleInputChange}
+          value={inputValue}
+        />
+        <button className="search-button" type="submit">
+          Blast off
+        </button>
+      </form>
     </div>
   );
 }
