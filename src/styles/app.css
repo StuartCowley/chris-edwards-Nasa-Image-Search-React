@@ -1,0 +1,16 @@
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  height: 20%;
+  width: 20%;
+  align-self: center;
+  padding: 0%;
+  background-color: transparent;
+}
