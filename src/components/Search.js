@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import getImages from "../requests/getImages";
 import "../styles/search.css";
 
 function SearchBar({ onSubmit }) {
@@ -10,7 +11,7 @@ function SearchBar({ onSubmit }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSubmit(inputValue);
+    getImages(inputValue);
   };
 
   return (
