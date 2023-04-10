@@ -2,33 +2,30 @@ import React, { useState } from "react";
 import getImages from "../requests/getImages";
 import "../styles/search.css";
 
-function SearchBar({ onSubmit }) {
-  const [inputValue, setInputValue] = useState("");
-
-  function handleInputChange(event) {
-    setInputValue(event.target.value);
-  }
+const Search = ({ setSearchResults }) => {
+  const [value, setValue] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    getImages(inputValue);
+    getImages(value).then((images) => setSearchResults(images));
   };
 
   return (
-    <div className="search-bar-container">
+    <div className="search-container">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Search..."
-          onChange={handleInputChange}
-          value={inputValue}
+          placeholder="Search for images"
+          value={value}
+          onChange={(event) => setValue(event.target.value)}
+          className="search-input"
         />
-        <button className="search-button" type="submit">
+        <button type="submit" className="search-button">
           Blast off
         </button>
       </form>
     </div>
   );
-}
+};
 
-export default SearchBar;
+export default Search;
