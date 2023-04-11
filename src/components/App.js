@@ -6,12 +6,6 @@ import Tags from "./Tags"; // Import the Tags component
 
 function App() {
   const [results, setResults] = useState([]);
-  const [searchPerformed, setSearchPerformed] = useState(false);
-
-  const handleSearch = (newResults) => {
-    setSearchPerformed(true);
-    setResults(newResults);
-  };
 
   return (
     <div className="App">
