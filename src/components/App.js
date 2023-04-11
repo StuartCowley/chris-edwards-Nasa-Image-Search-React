@@ -2,9 +2,16 @@ import React, { useState } from "react";
 import SearchBar from "./Search";
 import "../styles/app.css";
 import SearchResults from "./SearchResults";
+import Tags from "./Tags"; // Import the Tags component
 
 function App() {
   const [results, setResults] = useState([]);
+  const [searchPerformed, setSearchPerformed] = useState(false);
+
+  const handleSearch = (newResults) => {
+    setSearchPerformed(true);
+    setResults(newResults);
+  };
 
   return (
     <div className="App">
@@ -14,6 +21,7 @@ function App() {
         alt="Nasa Logo"
       />
       <SearchBar setSearchResults={setResults} />
+      <Tags setSearchResults={setResults} />
       <SearchResults results={results} />
     </div>
   );
