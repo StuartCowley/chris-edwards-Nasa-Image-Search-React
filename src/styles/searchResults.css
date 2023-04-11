@@ -1,16 +1,30 @@
 .masonry-grid {
   display: flex;
-  margin-left: -30px;
-  width: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .masonry-grid_column {
-  padding-left: 30px;
+  flex: 1;
+  min-width: 250px;
   background-clip: padding-box;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .image {
   width: 100%;
-  margin-bottom: 30px;
+  height: auto;
   object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.image:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
