@@ -4,6 +4,7 @@ import getImages from "../requests/getImages";
 
 const Tags = ({ setSearchResults }) => {
   const popularTags = [
+    "sun",
     "earth",
     "mars",
     "moon",
@@ -19,18 +20,20 @@ const Tags = ({ setSearchResults }) => {
   };
 
   return (
-    <div className="tags-container">
-      <p>Popular Searches:</p>
-      {popularTags.map((tag) => (
-        <button
-          key={tag}
-          className="tag-button"
-          onClick={() => handleTagClick(tag)}
-        >
-          {tag}
-        </button>
-      ))}
-    </div>
+    <>
+      <p>Popular searches</p>
+      <div className="tags-container">
+        {popularTags.map((tag) => (
+          <button
+            key={tag}
+            className="tag-button"
+            onClick={() => handleTagClick(tag)}
+          >
+            {tag}
+          </button>
+        ))}
+      </div>
+    </>
   );
 };
 
