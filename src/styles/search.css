@@ -63,3 +63,13 @@
 .tag:hover {
   background-color: #3e8e41;
 }
+
+@media only screen and (max-width: 600px) {
+  .search-input {
+    width: 200px;
+  }
+
+  .search-button {
+    padding: 10px;
+  }
+}
