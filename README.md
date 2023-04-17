@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# NASA Image Search App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created to demonstrate a simple image search application using the NASA Image and Video Library API.
 
-## Available Scripts
+## Task
 
-In the project directory, you can run:
+Build and design a search page which allows users to search for images by keyword using the NASA image API.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Search for images using the search bar
+- Browse images using popular tags
+- Responsive masonry-style grid layout for displaying images
+- Customized design for a better user experience
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots
 
-### `npm test`
+![Pre-search screenshot](pre_search_screenshot.png)
+![Post-search screenshot](post_search_screenshot.png)
+![Tags screenshot](tags_screenshot.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Built With
 
-### `npm run build`
+- React (functional component approach)
+- NASA Image and Video Library API
+- Axios for API requests
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Testing Libraries
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A BDD approach was taken when it came to testing the application, first building the component and implementing the required features, and then testing against the acceptance criteria.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Testing libraries include:
 
-### `npm run eject`
+- Jest
+- React Testing Library
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Packages Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In addition to the testing libraries mentioned above:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- ESLint - used to follow industry standard rules with some slight configurations
+- Prettier - used to ensure consistency in code formatting
+- Prop Types - used to type check this React application and catch errors before runtime
+- Axios - used to make requests to the NASA API endpoint
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Installation Instructions
 
-## Learn More
+1. Clone this repo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Git clone https://github.com/CodeChris96/react-tech-test.git
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Change directory into the repo
 
-### Code Splitting
+cd react-tech-test
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Install the dependencies from package-lock.json
 
-### Analyzing the Bundle Size
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. To start the app:
 
-### Making a Progressive Web App
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+5. To test the app:
 
-### Advanced Configuration
+npm test
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## If I Had More Time
 
-### Deployment
+I would like to implement:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Improve the "No results" behavior by only displaying it after a search has been performed.
+- Write tests for the getImages request function.
+- Enhance the overall design and user experience, including animations, transitions, and error handling.
 
-### `npm run build` fails to minify
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was authored by [Chris Edwards](https://github.com/Codechris96).
